@@ -1,0 +1,266 @@
+:root{--bg:#08080a;--panel:rgba(13,13,16,.72);--line:rgba(255,255,255,.1);--muted:#929198;--text:#f5f3f6;--accent:#c7b6ff}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text)}body{min-height:100vh;overflow-x:hidden}.backdrop{position:fixed;inset:0;z-index:0;overflow:hidden;background:#08080a}.bg-video,.bg-image{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;filter:blur(5px) brightness(.3) saturate(.65);transform:scale(1.04)}.bg-image{background-image:linear-gradient(110deg,rgba(0,0,0,.2),rgba(0,0,0,.6)),url("assets/background.gif");background-position:center;background-size:cover;opacity:.9}.backdrop:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 0%,rgba(0,0,0,.48) 60%,#050506 100%),linear-gradient(0deg,rgba(5,5,7,.78),rgba(5,5,7,.18))}.grain{position:absolute;inset:0;z-index:2;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}.sound-toggle{position:fixed;top:18px;left:18px;z-index:10;width:44px;height:44px;border:1px solid rgba(255,255,255,.14);border-radius:13px;background:rgba(20,20,23,.55);backdrop-filter:blur(15px);display:grid;place-items:center;color:#fff;cursor:pointer;transition:.25s}.sound-toggle:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}.sound-toggle svg{width:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.stage{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:42px 18px}.profile-card{width:min(100%,440px);padding:35px 29px 22px;border:1px solid rgba(255,255,255,.12);border-radius:25px;background:linear-gradient(145deg,rgba(29,28,32,.74),rgba(9,9,12,.78));backdrop-filter:blur(25px);box-shadow:0 24px 90px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06);text-align:center;animation:cardIn .9s cubic-bezier(.2,.8,.2,1) both}.top-orbit{width:94px;height:94px;margin:0 auto 18px;position:relative;display:grid;place-items:center}.orbit-ring{position:absolute;inset:0;border:1px solid rgba(218,206,255,.48);border-radius:32% 68% 61% 39%/42% 35% 65% 58%;animation:orbit 12s linear infinite;box-shadow:0 0 26px rgba(177,154,255,.12)}.orbit-ring:before,.orbit-ring:after{content:"";position:absolute;inset:7px;border:1px dashed rgba(255,255,255,.3);border-radius:50%;animation:orbit 20s linear infinite reverse}.orbit-ring:after{inset:-5px;border-color:rgba(255,255,255,.08);border-style:solid}.avatar{object-fit:cover;border-radius:50%;background:#17171b}.hero-avatar{width:72px;height:72px;border:1px solid rgba(255,255,255,.2);box-shadow:0 0 28px rgba(199,182,255,.16)}.eyebrow,.activity-label,.enter-overline,.enter-small{font-size:9px;letter-spacing:2.4px;font-weight:700;color:#a7a3af}.live-dot{display:inline-block;width:5px;height:5px;margin-left:5px;vertical-align:middle;border-radius:50%;background:#b8ffa9;box-shadow:0 0 10px #b8ffa9}h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(30px,7vw,39px);letter-spacing:-1.9px;margin:7px 0 4px;font-weight:600;text-shadow:0 0 28px rgba(255,255,255,.2)}.subtitle{font-size:12px;color:#a09da6;margin:0}.count-line{display:flex;align-items:center;justify-content:center;gap:12px;color:#77747f;font-size:10px;letter-spacing:2px;margin:21px 0 20px}.count-rule{width:38px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2))}.count-rule:last-child{transform:rotate(180deg)}.presence-panel{display:flex;align-items:center;text-align:left;gap:12px;padding:11px 12px;border:1px solid rgba(255,255,255,.055);border-radius:19px;background:rgba(5,5,7,.48);box-shadow:inset 0 1px 0 rgba(255,255,255,.025);transition:.25s}.presence-panel:hover{border-color:rgba(199,182,255,.24);transform:translateY(-2px)}.avatar-wrap{position:relative;flex-shrink:0}.small-avatar{width:49px;height:49px}.status-dot{position:absolute;right:-1px;bottom:0;width:12px;height:12px;border-radius:50%;border:2px solid #111114;background:#777}.status-dot.online{background:#4de39a}.status-dot.idle{background:#f2c45e}.status-dot.dnd{background:#ff5f67}.presence-copy{min-width:0;flex:1}.presence-name{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700}.mini-badge{color:#d3c4ff;font-size:12px}.presence-status{font-size:11px;color:#d1cdd6;margin-top:3px}.presence-detail{font-size:10px;color:#77737e;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:210px}.discord-mark{width:46px;height:46px;display:grid;place-items:center;flex-shrink:0;border-radius:12px;background:rgba(199,182,255,.12);color:#d8cbff}.discord-mark svg{width:23px;fill:currentColor}.activity-card{display:flex;align-items:center;gap:12px;text-align:left;margin-top:11px;padding:12px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.055);background:rgba(255,255,255,.025);min-height:64px;position:relative;overflow:hidden}.activity-icon{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:rgba(199,182,255,.12);color:#d8cbff;font-size:18px;flex-shrink:0}.activity-copy{min-width:0;flex:1}.activity-label{font-size:8px;letter-spacing:1.5px;color:#827e8b}.activity-title{font-size:12px;font-weight:600;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.activity-subtitle{font-size:10px;color:#85818c;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.activity-pulse{width:5px;height:5px;border-radius:50%;background:#c7b6ff;box-shadow:0 0 12px #c7b6ff;flex-shrink:0}.socials{display:flex;justify-content:center;align-items:center;gap:17px;margin:23px 0 21px}.socials a{width:25px;height:25px;color:#f3f0f6;display:grid;place-items:center;opacity:.84;transition:transform .2s,color .2s,opacity .2s;filter:drop-shadow(0 0 8px rgba(255,255,255,.18))}.socials a:hover{transform:translateY(-4px) scale(1.12);opacity:1;color:var(--accent)}.socials svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.socials a:first-child svg{fill:none;stroke:currentColor}.socials .solid{fill:currentColor;stroke:none}footer{display:flex;align-items:center;justify-content:center;gap:9px;color:#696670;font-size:8px;letter-spacing:2px}.footer-line{height:1px;width:33px;background:rgba(255,255,255,.12)}.bottom-note{margin:17px 0 0;color:rgba(255,255,255,.43);font-size:8px;letter-spacing:3px}.bottom-note span{color:#c7b6ff;padding:0 4px}.enter-screen{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:rgba(5,5,7,.86);backdrop-filter:blur(24px);transition:opacity .7s,visibility .7s}.enter-screen.hidden{opacity:0;visibility:hidden;pointer-events:none}.enter-content{text-align:center;padding:28px;animation:cardIn .8s ease both}.enter-symbol{font-size:35px;color:#d7cbff;text-shadow:0 0 30px rgba(199,182,255,.55);animation:orbit 18s linear infinite}.enter-overline{margin:18px 0 10px}.enter-content h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(40px,9vw,64px);letter-spacing:-3px;margin:0;font-weight:500}.enter-content h2 span{color:var(--accent)}.enter-hint{font-size:12px;color:#8e8a96;margin:8px 0 28px}.enter-button{display:flex;align-items:center;gap:28px;margin:auto;padding:14px 17px 14px 21px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.07);color:#fff;font:700 10px "DM Sans",sans-serif;letter-spacing:2px;cursor:pointer;transition:.25s}.enter-button:hover{background:rgba(199,182,255,.16);border-color:rgba(199,182,255,.55);transform:translateY(-3px);box-shadow:0 10px 30px rgba(199,182,255,.1)}.arrow{font-size:16px;color:var(--accent)}.enter-small{font-size:8px;letter-spacing:1.5px;color:#6e6a76;margin-top:22px}.toast{position:fixed;z-index:30;bottom:20px;left:50%;transform:translate(-50%,15px);opacity:0;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:rgba(15,15,18,.92);font-size:12px;color:#ddd;transition:.3s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}@keyframes orbit{to{transform:rotate(360deg)}}@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@media(max-width:480px){.stage{padding:76px 14px 30px}.profile-card{padding:29px 19px 20px;border-radius:22px}.sound-toggle{top:12px;left:12px}.presence-panel{gap:9px;padding:10px}.discord-mark{width:39px;height:39px}.presence-detail{max-width:170px}.socials{margin:21px 0}.bg-video,.bg-image{filter:blur(3px) brightness(.25) saturate(.65)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Dark-anime customization layer */
+:root{--accent:#c9b8ff;--accent-hot:#f0d9ff;--muted:#a39baa}
+.backdrop{background:#08070c}
+.bg-video,.bg-image{filter:blur(4px) brightness(.28) saturate(.72) contrast(1.08)}
+.bg-image{background-image:linear-gradient(115deg,rgba(5,4,10,.22),rgba(3,2,7,.72)),url("assets/background.gif"),radial-gradient(ellipse at 50% 45%,#292036 0%,#100e16 52%,#050507 100%);background-position:center;background-size:cover,cover,cover}
+.backdrop:after{background:radial-gradient(ellipse at 50% 42%,transparent 0%,rgba(4,3,8,.42) 48%,#030305 100%),linear-gradient(90deg,rgba(5,3,10,.3),transparent 45%,rgba(5,3,10,.3))}
+.anime-grid{position:absolute;inset:0;z-index:1;opacity:.16;pointer-events:none;background:linear-gradient(115deg,transparent 0 47%,rgba(202,183,255,.13) 47.1%,transparent 47.3% 70%,rgba(202,183,255,.1) 70.1%,transparent 70.3%),linear-gradient(0deg,transparent 0 92%,rgba(202,183,255,.14) 92.1%,transparent 92.3%);background-size:100% 100%,100% 80px;mask-image:linear-gradient(transparent,black 20%,black 80%,transparent)}
+.profile-card{position:relative;overflow:hidden;border-color:rgba(213,195,255,.17);background:linear-gradient(145deg,rgba(26,22,33,.78),rgba(8,8,12,.84));box-shadow:0 24px 90px rgba(0,0,0,.55),0 0 45px rgba(143,111,205,.07),inset 0 1px 0 rgba(255,255,255,.07)}
+.profile-card:before{content:"";position:absolute;top:0;left:13%;right:13%;height:1px;background:linear-gradient(90deg,transparent,rgba(213,195,255,.7),transparent)}
+.profile-card:after{content:"";position:absolute;inset:9px;border:1px solid rgba(255,255,255,.025);border-radius:18px;pointer-events:none}
+.top-orbit{margin-bottom:20px}
+.orbit-ring{border-color:rgba(216,199,255,.62);box-shadow:0 0 25px rgba(177,154,255,.16),inset 0 0 16px rgba(177,154,255,.05)}
+.orbit-spark{position:absolute;z-index:2;width:5px;height:5px;right:7px;top:15px;border-radius:50%;background:#f0d9ff;box-shadow:0 0 10px #d7c4ff,0 0 20px #9e7cff;animation:sparkPulse 2.8s ease-in-out infinite}
+.hero-avatar{border-color:rgba(224,208,255,.5);box-shadow:0 0 0 4px rgba(199,182,255,.035),0 0 30px rgba(177,154,255,.23)}
+h1{text-shadow:0 0 25px rgba(213,195,255,.22)}
+.presence-panel{border-color:rgba(208,190,255,.09);background:linear-gradient(100deg,rgba(7,6,10,.72),rgba(20,17,26,.6))}
+.presence-panel:hover{box-shadow:0 0 24px rgba(177,154,255,.07)}
+.discord-mark,.activity-icon{background:linear-gradient(145deg,rgba(199,182,255,.18),rgba(199,182,255,.06));border:1px solid rgba(199,182,255,.1)}
+.socials a{filter:drop-shadow(0 0 9px rgba(206,190,255,.24))}
+.socials a:hover{color:#e4d9ff;filter:drop-shadow(0 0 12px rgba(206,190,255,.55))}
+.music-visualizer{height:15px;display:flex;justify-content:center;align-items:center;gap:3px;margin:19px auto 0;opacity:.55}
+.music-visualizer i{display:block;width:2px;height:4px;border-radius:3px;background:#c9b8ff;box-shadow:0 0 7px rgba(201,184,255,.4)}
+.music-visualizer.playing i{animation:equalize .72s ease-in-out infinite alternate}
+.music-visualizer.playing i:nth-child(3n){animation-delay:-.4s}
+.music-visualizer.playing i:nth-child(2n){animation-delay:-.2s}
+.music-visualizer.playing i:nth-child(4n){animation-delay:-.55s}
+.particles{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none}
+.particle{position:absolute;width:3px;height:3px;border-radius:50%;background:#d8caff;opacity:0;box-shadow:0 0 10px rgba(199,182,255,.8);animation:driftUp var(--duration,12s) linear infinite;animation-delay:var(--delay,0s)}
+.enter-screen{background:radial-gradient(ellipse at 50% 45%,rgba(32,25,43,.88),rgba(4,4,7,.94) 65%);overflow:hidden}
+.enter-screen:before,.enter-screen:after{content:"";position:absolute;width:min(75vw,500px);height:min(75vw,500px);border:1px solid rgba(199,182,255,.09);border-radius:50%;pointer-events:none}
+.enter-screen:before{transform:scaleX(.42) rotate(35deg);box-shadow:0 0 80px rgba(143,111,205,.06)}
+.enter-screen:after{transform:scale(.8) rotate(-20deg);border-style:dashed;animation:orbit 80s linear infinite}
+.enter-symbol{color:#e2d5ff;text-shadow:0 0 18px rgba(199,182,255,.65),0 0 50px rgba(151,117,219,.3)}
+.enter-button{border-color:rgba(213,195,255,.28);background:linear-gradient(110deg,rgba(199,182,255,.13),rgba(255,255,255,.035))}
+.bottom-note{letter-spacing:3.5px}
+@keyframes equalize{from{height:3px;opacity:.45}to{height:14px;opacity:1}}
+@keyframes driftUp{0%{transform:translate3d(0,12vh,0) scale(.6);opacity:0}15%{opacity:.6}80%{opacity:.35}100%{transform:translate3d(28px,-105vh,0) scale(1.1);opacity:0}}
+@keyframes sparkPulse{0%,100%{opacity:.45;transform:scale(.75)}50%{opacity:1;transform:scale(1.2)}}
+@media(max-width:480px){.profile-card:after{inset:7px}.music-visualizer{margin-top:15px}}
+@media(prefers-reduced-motion:reduce){.particle,.music-visualizer i,.orbit-spark{animation:none!important}}
+
+/* User-requested refinements */
+.bg-video{display:none!important}
+.bg-image{filter:none!important;transform:none!important;inset:0;width:100%;height:100%;opacity:1;background-image:linear-gradient(110deg,rgba(0,0,0,.08),rgba(0,0,0,.38)),url("assets/background.gif");}
+@media(max-width:480px){.bg-video,.bg-image{filter:none!important}}
+.enter-screen{backdrop-filter:none;background:rgba(0,0,0,.48)}
+.enter-content{padding:20px;animation:none}
+.simple-enter{display:block;min-width:220px;padding:17px 26px;border-radius:8px;background:rgba(10,10,12,.65);border:1px solid rgba(255,255,255,.42);font-size:12px;letter-spacing:3px;text-align:center}
+.simple-enter:hover{background:rgba(255,255,255,.12);transform:scale(1.03);box-shadow:0 0 24px rgba(255,255,255,.08)}
+.profile-card{width:min(100%,520px);padding:38px 32px 27px}
+.presence-panel{padding:16px 17px;gap:15px;min-height:92px;border-color:rgba(208,190,255,.16)}
+.small-avatar{width:58px;height:58px}
+.presence-name{font-size:15px}
+.presence-status{font-size:12px}
+.presence-detail{font-size:11px;max-width:260px}
+.discord-mark{width:52px;height:52px}
+.activities-section{text-align:left;margin-top:17px}
+.activities-heading{font-size:9px;font-weight:700;letter-spacing:2px;color:#a7a3af;margin:0 0 9px 3px}
+.activities-list{display:flex;flex-direction:column;gap:9px}
+.activities-list .activity-card{margin-top:0;min-height:76px;padding:14px 16px;background:rgba(255,255,255,.035);border-color:rgba(208,190,255,.12)}
+.activities-list .activity-icon{width:42px;height:42px;font-size:20px;flex-shrink:0}
+.activities-list .activity-title{font-size:13px}
+.activities-list .activity-subtitle{font-size:11px;white-space:normal;line-height:1.4}
+@media(max-width:480px){.profile-card{padding:29px 19px 20px}.presence-panel{padding:13px;gap:10px}.small-avatar{width:49px;height:49px}.discord-mark{width:40px;height:40px}}
+
+
+/* Neutral grayscale presence/activity cards to match the black-and-gray theme */
+.presence-panel{
+  background:linear-gradient(135deg,rgba(34,34,38,.94),rgba(12,12,15,.97)) !important;
+  border-color:rgba(210,210,220,.18) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
+}
+.presence-panel:hover{box-shadow:0 0 22px rgba(255,255,255,.045) !important}
+.discord-mark,.activity-icon{
+  background:linear-gradient(145deg,rgba(115,115,125,.28),rgba(40,40,46,.38)) !important;
+  border-color:rgba(220,220,230,.14) !important;
+  color:#e0e0e6;
+}
+.activities-list .activity-card{
+  background:linear-gradient(135deg,rgba(35,35,40,.9),rgba(15,15,18,.96)) !important;
+  border-color:rgba(210,210,220,.16) !important;
+}
+.mini-badge{color:#d4d4dc}
+.status-dot.online{background:#9ca3af;box-shadow:0 0 0 3px rgba(156,163,175,.12),0 0 10px rgba(156,163,175,.35)}
+
+/* Show the actual game/app artwork supplied by Discord Rich Presence. */
+.activity-icon.has-logo{overflow:hidden;padding:0;background:#18181b !important}
+.activity-logo{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.activity-icon.has-logo img{image-rendering:auto}
+
+/* Discord-style avatar decoration overlays and username typography */
+.hero-frame{position:relative;width:72px;height:72px;display:grid;place-items:center;z-index:1}
+.hero-frame .hero-avatar{width:72px;height:72px}
+.avatar-decoration{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;z-index:3}
+.hero-decoration{transform:scale(1.28)}
+.small-avatar-frame{position:relative;display:block;width:58px;height:58px;flex-shrink:0}
+.small-avatar-frame .small-avatar{width:58px;height:58px}
+.small-decoration{transform:scale(1.28)}
+#displayName,#discordName{font-family:"gg sans","gg sans Normal","Discord Sans","DM Sans",system-ui,sans-serif;font-weight:700;font-feature-settings:"ss01" on;letter-spacing:-.045em}
+#displayName{font-size:clamp(31px,7vw,40px);line-height:1.12}
+.presence-name #discordName{font-size:13px;letter-spacing:-.025em}
+@media(max-width:480px){.small-avatar-frame{width:49px;height:49px}.small-avatar-frame .small-avatar{width:49px;height:49px}.hero-frame,.hero-frame .hero-avatar{width:72px;height:72px}}
+
+/* Latest refinement: keep decoration on the main avatar only, in clean white. */
+#smallDecoration,.small-decoration{display:none !important}
+.top-orbit{width:118px;height:118px;margin-bottom:24px}
+.hero-frame{width:92px;height:92px}
+.hero-frame .hero-avatar{width:92px;height:92px;border-color:rgba(255,255,255,.72);box-shadow:0 0 0 4px rgba(255,255,255,.045),0 0 28px rgba(255,255,255,.2),0 0 52px rgba(255,255,255,.08)}
+.orbit-ring{border-color:rgba(255,255,255,.78);box-shadow:0 0 24px rgba(255,255,255,.14),inset 0 0 14px rgba(255,255,255,.06)}
+.orbit-ring:before{border-color:rgba(255,255,255,.55)}
+.orbit-ring:after{border-color:rgba(255,255,255,.18)}
+.orbit-spark{background:#fff;box-shadow:0 0 8px #fff,0 0 18px rgba(255,255,255,.9)}
+.profile-card{width:min(100%,600px);padding:44px 34px 30px}
+#displayName{font-size:clamp(36px,7vw,46px)}
+.subtitle{font-size:13px}
+.count-line{font-size:11px;margin:24px 0 23px}
+.presence-panel{padding:17px 18px;gap:16px;min-height:98px}
+.small-avatar-frame,.small-avatar-frame .small-avatar{width:64px;height:64px}
+.presence-name{font-size:16px}
+.presence-name #discordName{font-size:15px}
+.presence-status{font-size:13px}
+.presence-detail{font-size:12px;max-width:300px}
+.discord-mark{width:52px;height:52px}
+.activity-card{padding:15px 16px;gap:14px;min-height:76px;margin-top:12px}
+.activity-icon{width:42px;height:42px;font-size:20px}
+.activity-label{font-size:9px}
+.activity-title{font-size:14px}
+.activity-subtitle{font-size:12px}
+.activities-heading{font-size:10px;letter-spacing:2px}
+.socials{gap:21px;margin:27px 0 23px}
+.socials a,.socials svg{width:26px;height:26px}
+@media(max-width:480px){
+ .profile-card{padding:34px 18px 23px}
+ .top-orbit{width:108px;height:108px}
+ .hero-frame,.hero-frame .hero-avatar{width:84px;height:84px}
+ .presence-panel{padding:13px;gap:10px;min-height:84px}
+ .small-avatar-frame,.small-avatar-frame .small-avatar{width:54px;height:54px}
+ .discord-mark{width:44px;height:44px}
+ .activity-card{padding:13px;min-height:70px}
+ .activity-icon{width:38px;height:38px}
+}
+
+/* User-requested: hide the standalone Discord profile/presence card while keeping activity cards. */
+.presence-panel{display:none!important}
+
+/* User-requested black / gray / red / white theme + Discord-inspired username typography */
+:root{--bg:#070708;--panel:rgba(18,18,20,.9);--line:rgba(255,255,255,.14);--muted:#a2a2a7;--text:#f7f7f8;--accent:#f04452;--accent-hot:#ff6b75}
+html,body{font-family:"gg sans","gg sans Normal","Discord Sans","DM Sans",system-ui,sans-serif}
+h1,#displayName,.enter-content h2{font-family:"gg sans","gg sans Normal","Discord Sans","DM Sans",system-ui,sans-serif;font-weight:700;letter-spacing:-.055em}
+.profile-card{border-color:rgba(255,255,255,.17);background:linear-gradient(145deg,rgba(28,28,31,.94),rgba(8,8,10,.96));box-shadow:0 24px 90px rgba(0,0,0,.65),0 0 34px rgba(240,68,82,.055),inset 0 1px 0 rgba(255,255,255,.07)}
+.profile-card:before{background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),rgba(240,68,82,.65),transparent)}
+.orbit-ring{border-color:rgba(255,255,255,.62);box-shadow:0 0 25px rgba(255,255,255,.09)}
+.orbit-ring:before{border-color:rgba(255,255,255,.42)}
+.orbit-ring:after{border-color:rgba(240,68,82,.28)}
+.orbit-spark{background:#fff;box-shadow:0 0 8px #fff,0 0 18px rgba(255,255,255,.9)}
+.hero-avatar{box-shadow:0 0 28px rgba(255,255,255,.12)}
+.eyebrow,.activity-label,.enter-overline,.enter-small,.activities-heading{color:#b5b5bb}
+.mini-badge{color:#fff}
+.presence-panel{background:linear-gradient(120deg,rgba(34,34,37,.9),rgba(12,12,14,.96));border-color:rgba(255,255,255,.14)}
+.discord-mark,.activity-icon{background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));border-color:rgba(255,255,255,.13);color:#f4f4f5}
+.activities-list .activity-card{background:linear-gradient(115deg,rgba(35,35,38,.78),rgba(13,13,15,.9));border-color:rgba(255,255,255,.13)}
+.activity-pulse{background:#ff4655;box-shadow:0 0 12px rgba(255,70,85,.8)}
+.socials a:hover{color:#ff4655}
+.bottom-note span,.arrow{color:#ff4655}
+.enter-symbol{color:#fff;text-shadow:0 0 25px rgba(255,255,255,.3)}
+.enter-button:hover{background:rgba(240,68,82,.12);border-color:rgba(240,68,82,.55);box-shadow:0 10px 30px rgba(240,68,82,.08)}
+
+
+/* Four-song playlist controls */
+.playlist-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin:8px auto 0;color:#aaa;font-size:9px;letter-spacing:2px;font-weight:700}
+.playlist-controls button{width:27px;height:25px;border-radius:7px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(80,80,86,.34),rgba(15,15,18,.75));color:#f5f5f5;font:600 20px/1 "DM Sans",sans-serif;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.playlist-controls button:hover{background:rgba(170,35,48,.32);border-color:rgba(230,75,85,.6);transform:translateY(-1px)}
+:root{--accent:#e3e3e6;--accent-hot:#f4f4f5;--muted:#a1a1aa}
+.orbit-ring{border-color:rgba(245,245,245,.62);box-shadow:0 0 25px rgba(255,255,255,.12),inset 0 0 16px rgba(255,255,255,.04)}
+.orbit-spark{background:#fff;box-shadow:0 0 10px #fff,0 0 20px rgba(255,255,255,.65)}
+.music-visualizer i{background:#eee;box-shadow:0 0 7px rgba(255,255,255,.3)}
+.status-dot.dnd{background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.12),0 0 10px rgba(239,68,68,.35)}
+
+
+/* Four synchronized background moods — changes with the selected song. */
+.backdrop::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.42;transition:background 900ms ease,opacity 900ms ease;background:linear-gradient(135deg,rgba(90,10,18,.28),transparent 55%,rgba(0,0,0,.2));mix-blend-mode:color}
+html[data-track="1"] .backdrop::before{background:linear-gradient(125deg,rgba(190,25,42,.62),rgba(30,8,12,.08) 52%,rgba(0,0,0,.25));opacity:.5}
+html[data-track="2"] .backdrop::before{background:linear-gradient(125deg,rgba(125,130,140,.52),rgba(22,22,27,.08) 52%,rgba(0,0,0,.32));opacity:.48}
+html[data-track="3"] .backdrop::before{background:linear-gradient(125deg,rgba(115,8,24,.72),rgba(42,5,12,.12) 52%,rgba(0,0,0,.28));opacity:.55}
+html[data-track="4"] .backdrop::before{background:linear-gradient(125deg,rgba(230,230,235,.4),rgba(80,80,88,.08) 52%,rgba(0,0,0,.3));opacity:.42}
+.bg-image{transition:opacity 900ms ease,filter 900ms ease}
+
+/* Extra-clear glass card and soft, borderless enter prompt */
+.profile-card{
+  background:linear-gradient(145deg,rgba(20,20,23,.48),rgba(7,7,9,.52)) !important;
+  backdrop-filter:blur(30px) saturate(115%);
+  -webkit-backdrop-filter:blur(30px) saturate(115%);
+}
+.enter-screen{
+  backdrop-filter:blur(12px) !important;
+  -webkit-backdrop-filter:blur(12px) !important;
+}
+.simple-enter{
+  background:rgba(10,10,12,.12) !important;
+  border:1px solid transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  transition:transform .25s ease,color .25s ease,text-shadow .25s ease;
+}
+.simple-enter:hover{
+  background:rgba(255,255,255,.04) !important;
+  border-color:transparent !important;
+  box-shadow:none !important;
+  transform:scale(1.04);
+  text-shadow:0 0 14px rgba(255,255,255,.4);
+}
+
+/* Intro waits for Discord sync; disabled state communicates that it is loading. */
+.simple-enter:disabled{opacity:.72;cursor:wait;transform:none;text-shadow:0 0 12px rgba(255,255,255,.2)}
+.simple-enter:disabled:hover{transform:none;box-shadow:none}
+
+/* Mobile-friendly layout and touch controls */
+html{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{width:100%;min-width:0;min-height:100svh;overscroll-behavior-x:none}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+@media (max-width:600px){
+  .stage{min-height:100svh;justify-content:center;padding:68px 14px 24px}
+  .profile-card{width:min(100%,440px);padding:30px 17px 22px;border-radius:21px}
+  .top-orbit{margin-bottom:18px}
+  #displayName{font-size:clamp(30px,9vw,42px);overflow-wrap:anywhere}
+  .subtitle{font-size:12px;line-height:1.5}
+  .count-line{gap:8px;margin:19px 0 18px;font-size:9px;letter-spacing:1.6px}
+  .count-rule{width:clamp(15px,7vw,32px)}
+  .presence-panel{width:100%;min-width:0;gap:9px;padding:10px;border-radius:15px}
+  .presence-copy,.activity-copy{min-width:0}
+  .presence-name,.activity-title{overflow-wrap:anywhere}
+  .presence-detail,.activity-subtitle{max-width:100%;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+  .activity-card{width:100%;min-width:0;gap:10px;padding:11px;border-radius:14px}
+  .activities-list{width:100%;min-width:0}
+  .socials{gap:clamp(18px,6vw,26px);margin:22px 0 18px}
+  .socials a{width:32px;height:32px;min-width:32px;min-height:32px}
+  .socials svg{width:23px;height:23px}
+  .playlist-controls{gap:14px;margin-top:10px}
+  .playlist-controls button{width:36px;height:34px;min-width:36px;min-height:34px}
+  .sound-toggle{width:42px;height:42px;top:12px;left:12px}
+  .enter-content{width:min(100%,420px);padding:24px 18px}
+  .enter-content h2{font-size:clamp(36px,11vw,58px);letter-spacing:-2px;overflow-wrap:anywhere}
+  .enter-button{max-width:100%;min-height:44px;gap:16px;padding:12px 15px;justify-content:center}
+  .enter-hint{line-height:1.5;margin-bottom:22px}
+  footer{flex-wrap:wrap;text-align:center;letter-spacing:1.3px}
+}
+@media (max-width:380px){
+  .stage{padding:62px 10px 18px}
+  .profile-card{padding:25px 12px 18px;border-radius:18px}
+  .top-orbit{width:98px;height:98px}
+  .hero-frame,.hero-frame .hero-avatar{width:76px;height:76px}
+  .presence-name #discordName{font-size:12px}
+  .activity-label{letter-spacing:1px}
+  .socials{gap:17px}
+  .bottom-note{letter-spacing:1.5px;text-align:center}
+}
+@media (max-height:700px) and (min-width:601px){
+  .stage{justify-content:flex-start;padding-top:26px;padding-bottom:24px}
+  .profile-card{padding-top:28px;padding-bottom:20px}
+  .top-orbit{margin-bottom:14px}
+  .count-line{margin:16px 0}
+}
+@media (prefers-reduced-motion:reduce){.bg-image,.enter-screen,.profile-card{transition:none!important;animation:none!important}}
