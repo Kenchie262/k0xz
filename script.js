@@ -2,7 +2,7 @@
 const CONFIG = {
   discordId: "444393598621057054",
   displayName: "kxx.z7",
-  tagline: "must've been the wind",
+  tagline: "Destiny called me",
   lanyardInvite: "https://discord.gg/lanyard"
 };
 
