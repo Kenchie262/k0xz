@@ -1,11 +1,11 @@
-:root{--bg:#08080a;--panel:rgba(13,13,16,.72);--line:rgba(255,255,255,.1);--muted:#929198;--text:#f5f3f6;--accent:#c7b6ff}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text)}body{min-height:100vh;overflow-x:hidden}.backdrop{position:fixed;inset:0;z-index:0;overflow:hidden;background:#08080a}.bg-video,.bg-image{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;filter:blur(5px) brightness(.3) saturate(.65);transform:scale(1.04)}.bg-image{background-image:linear-gradient(110deg,rgba(0,0,0,.2),rgba(0,0,0,.6)),url("assets/background.gif");background-position:center;background-size:cover;opacity:.9}.backdrop:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 0%,rgba(0,0,0,.48) 60%,#050506 100%),linear-gradient(0deg,rgba(5,5,7,.78),rgba(5,5,7,.18))}.grain{position:absolute;inset:0;z-index:2;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}.sound-toggle{position:fixed;top:18px;left:18px;z-index:10;width:44px;height:44px;border:1px solid rgba(255,255,255,.14);border-radius:13px;background:rgba(20,20,23,.55);backdrop-filter:blur(15px);display:grid;place-items:center;color:#fff;cursor:pointer;transition:.25s}.sound-toggle:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}.sound-toggle svg{width:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.stage{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:42px 18px}.profile-card{width:min(100%,440px);padding:35px 29px 22px;border:1px solid rgba(255,255,255,.12);border-radius:25px;background:linear-gradient(145deg,rgba(29,28,32,.74),rgba(9,9,12,.78));backdrop-filter:blur(25px);box-shadow:0 24px 90px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06);text-align:center;animation:cardIn .9s cubic-bezier(.2,.8,.2,1) both}.top-orbit{width:94px;height:94px;margin:0 auto 18px;position:relative;display:grid;place-items:center}.orbit-ring{position:absolute;inset:0;border:1px solid rgba(218,206,255,.48);border-radius:32% 68% 61% 39%/42% 35% 65% 58%;animation:orbit 12s linear infinite;box-shadow:0 0 26px rgba(177,154,255,.12)}.orbit-ring:before,.orbit-ring:after{content:"";position:absolute;inset:7px;border:1px dashed rgba(255,255,255,.3);border-radius:50%;animation:orbit 20s linear infinite reverse}.orbit-ring:after{inset:-5px;border-color:rgba(255,255,255,.08);border-style:solid}.avatar{object-fit:cover;border-radius:50%;background:#17171b}.hero-avatar{width:72px;height:72px;border:1px solid rgba(255,255,255,.2);box-shadow:0 0 28px rgba(199,182,255,.16)}.eyebrow,.activity-label,.enter-overline,.enter-small{font-size:9px;letter-spacing:2.4px;font-weight:700;color:#a7a3af}.live-dot{display:inline-block;width:5px;height:5px;margin-left:5px;vertical-align:middle;border-radius:50%;background:#b8ffa9;box-shadow:0 0 10px #b8ffa9}h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(30px,7vw,39px);letter-spacing:-1.9px;margin:7px 0 4px;font-weight:600;text-shadow:0 0 28px rgba(255,255,255,.2)}.subtitle{font-size:12px;color:#a09da6;margin:0}.count-line{display:flex;align-items:center;justify-content:center;gap:12px;color:#77747f;font-size:10px;letter-spacing:2px;margin:21px 0 20px}.count-rule{width:38px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2))}.count-rule:last-child{transform:rotate(180deg)}.presence-panel{display:flex;align-items:center;text-align:left;gap:12px;padding:11px 12px;border:1px solid rgba(255,255,255,.055);border-radius:19px;background:rgba(5,5,7,.48);box-shadow:inset 0 1px 0 rgba(255,255,255,.025);transition:.25s}.presence-panel:hover{border-color:rgba(199,182,255,.24);transform:translateY(-2px)}.avatar-wrap{position:relative;flex-shrink:0}.small-avatar{width:49px;height:49px}.status-dot{position:absolute;right:-1px;bottom:0;width:12px;height:12px;border-radius:50%;border:2px solid #111114;background:#777}.status-dot.online{background:#4de39a}.status-dot.idle{background:#f2c45e}.status-dot.dnd{background:#ff5f67}.presence-copy{min-width:0;flex:1}.presence-name{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700}.mini-badge{color:#d3c4ff;font-size:12px}.presence-status{font-size:11px;color:#d1cdd6;margin-top:3px}.presence-detail{font-size:10px;color:#77737e;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:210px}.discord-mark{width:46px;height:46px;display:grid;place-items:center;flex-shrink:0;border-radius:12px;background:rgba(199,182,255,.12);color:#d8cbff}.discord-mark svg{width:23px;fill:currentColor}.activity-card{display:flex;align-items:center;gap:12px;text-align:left;margin-top:11px;padding:12px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.055);background:rgba(255,255,255,.025);min-height:64px;position:relative;overflow:hidden}.activity-icon{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:rgba(199,182,255,.12);color:#d8cbff;font-size:18px;flex-shrink:0}.activity-copy{min-width:0;flex:1}.activity-label{font-size:8px;letter-spacing:1.5px;color:#827e8b}.activity-title{font-size:12px;font-weight:600;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.activity-subtitle{font-size:10px;color:#85818c;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.activity-pulse{width:5px;height:5px;border-radius:50%;background:#c7b6ff;box-shadow:0 0 12px #c7b6ff;flex-shrink:0}.socials{display:flex;justify-content:center;align-items:center;gap:17px;margin:23px 0 21px}.socials a{width:25px;height:25px;color:#f3f0f6;display:grid;place-items:center;opacity:.84;transition:transform .2s,color .2s,opacity .2s;filter:drop-shadow(0 0 8px rgba(255,255,255,.18))}.socials a:hover{transform:translateY(-4px) scale(1.12);opacity:1;color:var(--accent)}.socials svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.socials a:first-child svg{fill:none;stroke:currentColor}.socials .solid{fill:currentColor;stroke:none}footer{display:flex;align-items:center;justify-content:center;gap:9px;color:#696670;font-size:8px;letter-spacing:2px}.footer-line{height:1px;width:33px;background:rgba(255,255,255,.12)}.bottom-note{margin:17px 0 0;color:rgba(255,255,255,.43);font-size:8px;letter-spacing:3px}.bottom-note span{color:#c7b6ff;padding:0 4px}.enter-screen{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:rgba(5,5,7,.86);backdrop-filter:blur(24px);transition:opacity .7s,visibility .7s}.enter-screen.hidden{opacity:0;visibility:hidden;pointer-events:none}.enter-content{text-align:center;padding:28px;animation:cardIn .8s ease both}.enter-symbol{font-size:35px;color:#d7cbff;text-shadow:0 0 30px rgba(199,182,255,.55);animation:orbit 18s linear infinite}.enter-overline{margin:18px 0 10px}.enter-content h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(40px,9vw,64px);letter-spacing:-3px;margin:0;font-weight:500}.enter-content h2 span{color:var(--accent)}.enter-hint{font-size:12px;color:#8e8a96;margin:8px 0 28px}.enter-button{display:flex;align-items:center;gap:28px;margin:auto;padding:14px 17px 14px 21px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.07);color:#fff;font:700 10px "DM Sans",sans-serif;letter-spacing:2px;cursor:pointer;transition:.25s}.enter-button:hover{background:rgba(199,182,255,.16);border-color:rgba(199,182,255,.55);transform:translateY(-3px);box-shadow:0 10px 30px rgba(199,182,255,.1)}.arrow{font-size:16px;color:var(--accent)}.enter-small{font-size:8px;letter-spacing:1.5px;color:#6e6a76;margin-top:22px}.toast{position:fixed;z-index:30;bottom:20px;left:50%;transform:translate(-50%,15px);opacity:0;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:rgba(15,15,18,.92);font-size:12px;color:#ddd;transition:.3s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}@keyframes orbit{to{transform:rotate(360deg)}}@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@media(max-width:480px){.stage{padding:76px 14px 30px}.profile-card{padding:29px 19px 20px;border-radius:22px}.sound-toggle{top:12px;left:12px}.presence-panel{gap:9px;padding:10px}.discord-mark{width:39px;height:39px}.presence-detail{max-width:170px}.socials{margin:21px 0}.bg-video,.bg-image{filter:blur(3px) brightness(.25) saturate(.65)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+:root{--bg:#08080a;--panel:rgba(13,13,16,.72);--line:rgba(255,255,255,.1);--muted:#929198;--text:#f5f3f6;--accent:#c7b6ff}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text)}body{min-height:100vh;overflow-x:hidden}.backdrop{position:fixed;inset:0;z-index:0;overflow:hidden;background:#08080a}.bg-video,.bg-image{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;filter:brightness(.58) saturate(.82) contrast(1.08);transform:scale(1.04)}.bg-image{background-image:linear-gradient(110deg,rgba(0,0,0,.2),rgba(0,0,0,.6)),url("assets/background.gif");background-position:center;background-size:cover;opacity:.9}.backdrop:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 0%,rgba(0,0,0,.48) 60%,#050506 100%),linear-gradient(0deg,rgba(5,5,7,.78),rgba(5,5,7,.18))}.grain{position:absolute;inset:0;z-index:2;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}.sound-toggle{position:fixed;top:18px;left:18px;z-index:10;width:44px;height:44px;border:1px solid rgba(255,255,255,.14);border-radius:13px;background:rgba(20,20,23,.55);backdrop-filter:blur(15px);display:grid;place-items:center;color:#fff;cursor:pointer;transition:.25s}.sound-toggle:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}.sound-toggle svg{width:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.stage{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:42px 18px}.profile-card{width:min(100%,440px);padding:35px 29px 22px;border:1px solid rgba(255,255,255,.12);border-radius:25px;background:linear-gradient(145deg,rgba(29,28,32,.74),rgba(9,9,12,.78));backdrop-filter:blur(25px);box-shadow:0 24px 90px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06);text-align:center;animation:cardIn .9s cubic-bezier(.2,.8,.2,1) both}.top-orbit{width:94px;height:94px;margin:0 auto 18px;position:relative;display:grid;place-items:center}.orbit-ring{position:absolute;inset:0;border:1px solid rgba(218,206,255,.48);border-radius:32% 68% 61% 39%/42% 35% 65% 58%;animation:orbit 12s linear infinite;box-shadow:0 0 26px rgba(177,154,255,.12)}.orbit-ring:before,.orbit-ring:after{content:"";position:absolute;inset:7px;border:1px dashed rgba(255,255,255,.3);border-radius:50%;animation:orbit 20s linear infinite reverse}.orbit-ring:after{inset:-5px;border-color:rgba(255,255,255,.08);border-style:solid}.avatar{object-fit:cover;border-radius:50%;background:#17171b}.hero-avatar{width:72px;height:72px;border:1px solid rgba(255,255,255,.2);box-shadow:0 0 28px rgba(199,182,255,.16)}.eyebrow,.activity-label,.enter-overline,.enter-small{font-size:9px;letter-spacing:2.4px;font-weight:700;color:#a7a3af}.live-dot{display:inline-block;width:5px;height:5px;margin-left:5px;vertical-align:middle;border-radius:50%;background:#b8ffa9;box-shadow:0 0 10px #b8ffa9}h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(30px,7vw,39px);letter-spacing:-1.9px;margin:7px 0 4px;font-weight:600;text-shadow:0 0 28px rgba(255,255,255,.2)}.subtitle{font-size:12px;color:#a09da6;margin:0}.count-line{display:flex;align-items:center;justify-content:center;gap:12px;color:#77747f;font-size:10px;letter-spacing:2px;margin:21px 0 20px}.count-rule{width:38px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2))}.count-rule:last-child{transform:rotate(180deg)}.presence-panel{display:flex;align-items:center;text-align:left;gap:12px;padding:11px 12px;border:1px solid rgba(255,255,255,.055);border-radius:19px;background:rgba(5,5,7,.48);box-shadow:inset 0 1px 0 rgba(255,255,255,.025);transition:.25s}.presence-panel:hover{border-color:rgba(199,182,255,.24);transform:translateY(-2px)}.avatar-wrap{position:relative;flex-shrink:0}.small-avatar{width:49px;height:49px}.status-dot{position:absolute;right:-1px;bottom:0;width:12px;height:12px;border-radius:50%;border:2px solid #111114;background:#777}.status-dot.online{background:#4de39a}.status-dot.idle{background:#f2c45e}.status-dot.dnd{background:#ff5f67}.presence-copy{min-width:0;flex:1}.presence-name{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700}.mini-badge{color:#d3c4ff;font-size:12px}.presence-status{font-size:11px;color:#d1cdd6;margin-top:3px}.presence-detail{font-size:10px;color:#77737e;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:210px}.discord-mark{width:46px;height:46px;display:grid;place-items:center;flex-shrink:0;border-radius:12px;background:rgba(199,182,255,.12);color:#d8cbff}.discord-mark svg{width:23px;fill:currentColor}.activity-card{display:flex;align-items:center;gap:12px;text-align:left;margin-top:11px;padding:12px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.055);background:rgba(255,255,255,.025);min-height:64px;position:relative;overflow:hidden}.activity-icon{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:rgba(199,182,255,.12);color:#d8cbff;font-size:18px;flex-shrink:0}.activity-copy{min-width:0;flex:1}.activity-label{font-size:8px;letter-spacing:1.5px;color:#827e8b}.activity-title{font-size:12px;font-weight:600;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.activity-subtitle{font-size:10px;color:#85818c;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.activity-pulse{width:5px;height:5px;border-radius:50%;background:#c7b6ff;box-shadow:0 0 12px #c7b6ff;flex-shrink:0}.socials{display:flex;justify-content:center;align-items:center;gap:17px;margin:23px 0 21px}.socials a{width:25px;height:25px;color:#f3f0f6;display:grid;place-items:center;opacity:.84;transition:transform .2s,color .2s,opacity .2s;filter:drop-shadow(0 0 8px rgba(255,255,255,.18))}.socials a:hover{transform:translateY(-4px) scale(1.12);opacity:1;color:var(--accent)}.socials svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.socials a:first-child svg{fill:none;stroke:currentColor}.socials .solid{fill:currentColor;stroke:none}footer{display:flex;align-items:center;justify-content:center;gap:9px;color:#696670;font-size:8px;letter-spacing:2px}.footer-line{height:1px;width:33px;background:rgba(255,255,255,.12)}.bottom-note{margin:17px 0 0;color:rgba(255,255,255,.43);font-size:8px;letter-spacing:3px}.bottom-note span{color:#c7b6ff;padding:0 4px}.enter-screen{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:rgba(5,5,7,.86);backdrop-filter:blur(24px);transition:opacity .7s,visibility .7s}.enter-screen.hidden{opacity:0;visibility:hidden;pointer-events:none}.enter-content{text-align:center;padding:28px;animation:cardIn .8s ease both}.enter-symbol{font-size:35px;color:#d7cbff;text-shadow:0 0 30px rgba(199,182,255,.55);animation:orbit 18s linear infinite}.enter-overline{margin:18px 0 10px}.enter-content h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(40px,9vw,64px);letter-spacing:-3px;margin:0;font-weight:500}.enter-content h2 span{color:var(--accent)}.enter-hint{font-size:12px;color:#8e8a96;margin:8px 0 28px}.enter-button{display:flex;align-items:center;gap:28px;margin:auto;padding:14px 17px 14px 21px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.07);color:#fff;font:700 10px "DM Sans",sans-serif;letter-spacing:2px;cursor:pointer;transition:.25s}.enter-button:hover{background:rgba(199,182,255,.16);border-color:rgba(199,182,255,.55);transform:translateY(-3px);box-shadow:0 10px 30px rgba(199,182,255,.1)}.arrow{font-size:16px;color:var(--accent)}.enter-small{font-size:8px;letter-spacing:1.5px;color:#6e6a76;margin-top:22px}.toast{position:fixed;z-index:30;bottom:20px;left:50%;transform:translate(-50%,15px);opacity:0;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:rgba(15,15,18,.92);font-size:12px;color:#ddd;transition:.3s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}@keyframes orbit{to{transform:rotate(360deg)}}@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@media(max-width:480px){.stage{padding:76px 14px 30px}.profile-card{padding:29px 19px 20px;border-radius:22px}.sound-toggle{top:12px;left:12px}.presence-panel{gap:9px;padding:10px}.discord-mark{width:39px;height:39px}.presence-detail{max-width:170px}.socials{margin:21px 0}.bg-video,.bg-image{filter:brightness(.52) saturate(.82) contrast(1.1)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
-/* Dark-anime customization layer */
+
 :root{--accent:#c9b8ff;--accent-hot:#f0d9ff;--muted:#a39baa}
 .backdrop{background:#08070c}
-.bg-video,.bg-image{filter:blur(4px) brightness(.28) saturate(.72) contrast(1.08)}
-.bg-image{background-image:linear-gradient(115deg,rgba(5,4,10,.22),rgba(3,2,7,.72)),url("assets/background.gif"),radial-gradient(ellipse at 50% 45%,#292036 0%,#100e16 52%,#050507 100%);background-position:center;background-size:cover,cover,cover}
-.backdrop:after{background:radial-gradient(ellipse at 50% 42%,transparent 0%,rgba(4,3,8,.42) 48%,#030305 100%),linear-gradient(90deg,rgba(5,3,10,.3),transparent 45%,rgba(5,3,10,.3))}
+.bg-video,.bg-image{filter:brightness(.58) saturate(.82) contrast(1.12)}
+.bg-image{background-image:linear-gradient(115deg,rgba(5,4,10,.22),rgba(3,2,7,.42)),url("assets/background.gif"),radial-gradient(ellipse at 50% 45%,#292036 0%,#100e16 52%,#050507 100%);background-position:center;background-size:cover,cover,cover}
+.backdrop:after{background:radial-gradient(ellipse at 50% 42%,transparent 0%,rgba(4,3,8,.25) 48%,#030305 100%),linear-gradient(90deg,rgba(5,3,10,.3),transparent 45%,rgba(5,3,10,.3))}
 .anime-grid{position:absolute;inset:0;z-index:1;opacity:.16;pointer-events:none;background:linear-gradient(115deg,transparent 0 47%,rgba(202,183,255,.13) 47.1%,transparent 47.3% 70%,rgba(202,183,255,.1) 70.1%,transparent 70.3%),linear-gradient(0deg,transparent 0 92%,rgba(202,183,255,.14) 92.1%,transparent 92.3%);background-size:100% 100%,100% 80px;mask-image:linear-gradient(transparent,black 20%,black 80%,transparent)}
 .profile-card{position:relative;overflow:hidden;border-color:rgba(213,195,255,.17);background:linear-gradient(145deg,rgba(26,22,33,.78),rgba(8,8,12,.84));box-shadow:0 24px 90px rgba(0,0,0,.55),0 0 45px rgba(143,111,205,.07),inset 0 1px 0 rgba(255,255,255,.07)}
 .profile-card:before{content:"";position:absolute;top:0;left:13%;right:13%;height:1px;background:linear-gradient(90deg,transparent,rgba(213,195,255,.7),transparent)}
@@ -41,7 +41,7 @@ h1{text-shadow:0 0 25px rgba(213,195,255,.22)}
 @media(max-width:480px){.profile-card:after{inset:7px}.music-visualizer{margin-top:15px}}
 @media(prefers-reduced-motion:reduce){.particle,.music-visualizer i,.orbit-spark{animation:none!important}}
 
-/* User-requested refinements */
+
 .bg-video{display:none!important}
 .bg-image{filter:none!important;transform:none!important;inset:0;width:100%;height:100%;opacity:1;background-image:linear-gradient(110deg,rgba(0,0,0,.08),rgba(0,0,0,.38)),url("assets/background.gif");}
 @media(max-width:480px){.bg-video,.bg-image{filter:none!important}}
@@ -66,7 +66,7 @@ h1{text-shadow:0 0 25px rgba(213,195,255,.22)}
 @media(max-width:480px){.profile-card{padding:29px 19px 20px}.presence-panel{padding:13px;gap:10px}.small-avatar{width:49px;height:49px}.discord-mark{width:40px;height:40px}}
 
 
-/* Neutral grayscale presence/activity cards to match the black-and-gray theme */
+
 .presence-panel{
   background:linear-gradient(135deg,rgba(34,34,38,.94),rgba(12,12,15,.97)) !important;
   border-color:rgba(210,210,220,.18) !important;
@@ -85,12 +85,12 @@ h1{text-shadow:0 0 25px rgba(213,195,255,.22)}
 .mini-badge{color:#d4d4dc}
 .status-dot.online{background:#9ca3af;box-shadow:0 0 0 3px rgba(156,163,175,.12),0 0 10px rgba(156,163,175,.35)}
 
-/* Show the actual game/app artwork supplied by Discord Rich Presence. */
+
 .activity-icon.has-logo{overflow:hidden;padding:0;background:#18181b !important}
 .activity-logo{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
 .activity-icon.has-logo img{image-rendering:auto}
 
-/* Discord-style avatar decoration overlays and username typography */
+
 .hero-frame{position:relative;width:72px;height:72px;display:grid;place-items:center;z-index:1}
 .hero-frame .hero-avatar{width:72px;height:72px}
 .avatar-decoration{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;z-index:3}
@@ -103,7 +103,7 @@ h1{text-shadow:0 0 25px rgba(213,195,255,.22)}
 .presence-name #discordName{font-size:13px;letter-spacing:-.025em}
 @media(max-width:480px){.small-avatar-frame{width:49px;height:49px}.small-avatar-frame .small-avatar{width:49px;height:49px}.hero-frame,.hero-frame .hero-avatar{width:72px;height:72px}}
 
-/* Latest refinement: keep decoration on the main avatar only, in clean white. */
+
 #smallDecoration,.small-decoration{display:none !important}
 .top-orbit{width:118px;height:118px;margin-bottom:24px}
 .hero-frame{width:92px;height:92px}
@@ -142,10 +142,10 @@ h1{text-shadow:0 0 25px rgba(213,195,255,.22)}
  .activity-icon{width:38px;height:38px}
 }
 
-/* User-requested: hide the standalone Discord profile/presence card while keeping activity cards. */
+
 .presence-panel{display:none!important}
 
-/* User-requested black / gray / red / white theme + Discord-inspired username typography */
+
 :root{--bg:#070708;--panel:rgba(18,18,20,.9);--line:rgba(255,255,255,.14);--muted:#a2a2a7;--text:#f7f7f8;--accent:#f04452;--accent-hot:#ff6b75}
 html,body{font-family:"gg sans","gg sans Normal","Discord Sans","DM Sans",system-ui,sans-serif}
 h1,#displayName,.enter-content h2{font-family:"gg sans","gg sans Normal","Discord Sans","DM Sans",system-ui,sans-serif;font-weight:700;letter-spacing:-.055em}
@@ -168,7 +168,7 @@ h1,#displayName,.enter-content h2{font-family:"gg sans","gg sans Normal","Discor
 .enter-button:hover{background:rgba(240,68,82,.12);border-color:rgba(240,68,82,.55);box-shadow:0 10px 30px rgba(240,68,82,.08)}
 
 
-/* Four-song playlist controls */
+
 .playlist-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin:8px auto 0;color:#aaa;font-size:9px;letter-spacing:2px;font-weight:700}
 .playlist-controls button{width:27px;height:25px;border-radius:7px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(80,80,86,.34),rgba(15,15,18,.75));color:#f5f5f5;font:600 20px/1 "DM Sans",sans-serif;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
 .playlist-controls button:hover{background:rgba(170,35,48,.32);border-color:rgba(230,75,85,.6);transform:translateY(-1px)}
@@ -179,7 +179,7 @@ h1,#displayName,.enter-content h2{font-family:"gg sans","gg sans Normal","Discor
 .status-dot.dnd{background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.12),0 0 10px rgba(239,68,68,.35)}
 
 
-/* Four synchronized background moods — changes with the selected song. */
+
 .backdrop::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.42;transition:background 900ms ease,opacity 900ms ease;background:linear-gradient(135deg,rgba(90,10,18,.28),transparent 55%,rgba(0,0,0,.2));mix-blend-mode:color}
 html[data-track="1"] .backdrop::before{background:linear-gradient(125deg,rgba(190,25,42,.62),rgba(30,8,12,.08) 52%,rgba(0,0,0,.25));opacity:.5}
 html[data-track="2"] .backdrop::before{background:linear-gradient(125deg,rgba(125,130,140,.52),rgba(22,22,27,.08) 52%,rgba(0,0,0,.32));opacity:.48}
@@ -187,7 +187,7 @@ html[data-track="3"] .backdrop::before{background:linear-gradient(125deg,rgba(11
 html[data-track="4"] .backdrop::before{background:linear-gradient(125deg,rgba(230,230,235,.4),rgba(80,80,88,.08) 52%,rgba(0,0,0,.3));opacity:.42}
 .bg-image{transition:opacity 900ms ease,filter 900ms ease}
 
-/* Extra-clear glass card and soft, borderless enter prompt */
+
 .profile-card{
   background:linear-gradient(145deg,rgba(20,20,23,.48),rgba(7,7,9,.52)) !important;
   backdrop-filter:blur(30px) saturate(115%);
@@ -213,11 +213,11 @@ html[data-track="4"] .backdrop::before{background:linear-gradient(125deg,rgba(23
   text-shadow:0 0 14px rgba(255,255,255,.4);
 }
 
-/* Intro waits for Discord sync; disabled state communicates that it is loading. */
+
 .simple-enter:disabled{opacity:.72;cursor:wait;transform:none;text-shadow:0 0 12px rgba(255,255,255,.2)}
 .simple-enter:disabled:hover{transform:none;box-shadow:none}
 
-/* Mobile-friendly layout and touch controls */
+
 html{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{width:100%;min-width:0;min-height:100svh;overscroll-behavior-x:none}
 button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
@@ -265,7 +265,7 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 }
 @media (prefers-reduced-motion:reduce){.bg-image,.enter-screen,.profile-card{transition:none!important;animation:none!important}}
 
-/* Plain black enter screen: show only the prompt */
+
 .enter-screen {
   background: #000 !important;
   backdrop-filter: none !important;
@@ -302,7 +302,7 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 }
 
 
-/* Exact minimal entry screen: solid black with centered spaced text only */
+
 .enter-screen {
   position: fixed !important;
   inset: 0 !important;
@@ -348,7 +348,7 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
   cursor: pointer !important;
 }
 
-/* Click-triggered UI effects inspired by the supplied reference video. */
+
 .entry-burst {
   position: fixed;
   z-index: 40;
@@ -421,7 +421,7 @@ button, .presence-panel, .activity-card, .socials a { position: relative; overfl
 }
 
 
-/* Reference-inspired clean profile layout: no purple burst, minimal glass panels. */
+
 .entry-burst { display:none !important; }
 .profile-card {
   width:min(100%, 560px); padding:34px 28px 26px; border-radius:0;
@@ -453,7 +453,7 @@ h1 { font-family:Georgia,serif; font-weight:400; letter-spacing:3px; font-size:3
 .profile-card.ui-clicked,.presence-panel.ui-clicked,.activity-card.ui-clicked,button.ui-clicked,.socials a.ui-clicked { box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 18px rgba(255,255,255,.08); }
 @media(max-width:480px){.profile-card{padding:26px 14px 22px}.top-orbit{width:100px;height:100px}.hero-avatar{width:100px;height:100px}.playlist-controls{padding:10px 12px}.activities-section{width:100%}}
 
-/* Refinement: retain UI motion, use soft-edged frosted glass, and keep links above activities. */
+
 .profile-card{
   width:min(100%,560px);
   padding:34px 28px 26px;
@@ -467,7 +467,7 @@ h1 { font-family:Georgia,serif; font-weight:400; letter-spacing:3px; font-size:3
   animation:cardIn .7s cubic-bezier(.2,.8,.2,1) both;
 }
 .profile-card:before,.profile-card:after{display:none}
-/* Keep the avatar orbit motion and other UI animations; only the old ray burst stays disabled. */
+
 .top-orbit{width:112px;height:112px;margin-bottom:24px}
 .orbit-ring,.orbit-ring:before,.orbit-ring:after{display:block}
 .orbit-ring{border-color:rgba(255,255,255,.20);box-shadow:0 0 24px rgba(255,255,255,.06)}
@@ -484,7 +484,7 @@ h1 { font-family:Georgia,serif; font-weight:400; letter-spacing:3px; font-size:3
 .playlist-controls:hover{background:rgba(12,12,16,.4);border-color:rgba(255,255,255,.2)}
 @media(max-width:480px){.profile-card{padding:28px 16px 22px;border-radius:25px;background:rgba(12,11,16,.22)}.top-orbit{width:104px;height:104px}.hero-avatar{width:92px;height:92px}.socials{margin:20px 0 25px}.activities-section{width:100%}}
 
-/* Final polish: restore the entrance choreography, enlarge the content, and give music/activity their own glass panels. */
+
 .enter-screen{opacity:1;visibility:visible;transition:opacity .42s ease,visibility .42s ease;}
 .enter-screen.leaving{opacity:0;visibility:hidden;pointer-events:none;}
 .enter-content{animation:enterPromptIn 1s cubic-bezier(.2,.8,.2,1) both !important;}
@@ -524,7 +524,7 @@ h1{font-size:39px;margin:10px 0 14px;}
 @media(max-width:520px){.profile-card{width:100%;padding:32px 17px 25px;border-radius:25px}.top-orbit{width:112px;height:112px}.hero-avatar{width:102px;height:102px}h1{font-size:34px}.socials{gap:22px;margin:22px 0 26px}.music-area,.activities-section{padding:15px 13px;border-radius:18px}.music-area{margin-bottom:15px}.playlist-controls{padding:12px 10px}.activities-list .activity-card{min-height:70px;padding:15px}.music-heading,.activities-heading{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.enter-content,.enter-button.simple-enter,body.ui-awakening .profile-card,body.ui-awakening .top-orbit,body.ui-awakening .socials a,body.ui-awakening .music-area,body.ui-awakening .activities-section,.music-visualizer i{animation:none!important}}
 
-/* Animated typography for the profile tagline and signature line */
+
 #tagline{
   position:relative;
   display:inline-block;
@@ -570,7 +570,7 @@ h1{font-size:39px;margin:10px 0 14px;}
 @keyframes textShimmer{0%,68%,100%{transform:translateX(-115%)}82%{transform:translateX(115%)}}
 @media(prefers-reduced-motion:reduce){#tagline,.count-line > span:nth-child(2),.count-line > span:nth-child(2)::after{animation:none!important;transition:none!important}}
 
-/* Idle motion and a more distinctive main username font */
+
 #displayName{
   font-family:"Cinzel","Bodoni MT",Didot,Georgia,serif!important;
   font-weight:500!important;
@@ -603,7 +603,7 @@ h1{font-size:39px;margin:10px 0 14px;}
 @keyframes ruleBreathReverse{0%,100%{opacity:.35;transform:rotate(180deg) scaleX(.78)}50%{opacity:.9;transform:rotate(180deg) scaleX(1)}}
 @media(prefers-reduced-motion:reduce){#displayName,#tagline,.count-line > span:nth-child(2),.count-rule,.count-rule:last-child{animation:none!important}}
 
-/* Larger profile and Discord-style server tag */
+
 .profile-card{width:min(100%,680px);padding:50px 42px 36px}
 .top-orbit{width:126px;height:126px;margin-bottom:24px}
 .hero-avatar{width:98px;height:98px}
@@ -624,7 +624,6 @@ h1{font-size:39px;margin:10px 0 14px;}
 @media(max-width:600px){.profile-card{width:min(100%,100%);padding:36px 20px 25px}.top-orbit{width:112px;height:112px}.hero-avatar{width:86px;height:86px}.name-line{gap:8px;font-size:clamp(31px,8vw,43px)}.server-tag{font-size:10px;padding:4px 7px}.music-area,.activities-section{padding:14px 12px}.socials{gap:17px}}
 @media(prefers-reduced-motion:reduce){.server-tag{animation:none!important}}
 
-/* Rich Presence artwork: show the real activity image instead of hiding the image slot. */
 .activities-list .activity-card{min-height:92px;gap:14px}
 .activity-art{width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;overflow:hidden;border-radius:13px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.1);color:#f4f4f5;font-size:23px}
 .activity-art.has-logo{padding:0;background:#17171b}
@@ -635,7 +634,7 @@ h1{font-size:39px;margin:10px 0 14px;}
 .activities-list .activity-title,.activities-list .activity-subtitle{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.45}
 @media(max-width:520px){.activity-art{width:48px;height:48px;flex-basis:48px}.activities-list .activity-card{gap:10px;padding:13px}}
 
-/* Avatar size boost: larger main profile portrait while preserving orbit/decor animations. */
+
 .top-orbit{width:150px;height:150px;margin-bottom:22px}
 .hero-frame,.hero-frame .hero-avatar{width:130px;height:130px}
 .hero-avatar{width:130px;height:130px}
@@ -643,4 +642,119 @@ h1{font-size:39px;margin:10px 0 14px;}
 @media(max-width:600px){
   .top-orbit{width:132px;height:132px;margin-bottom:20px}
   .hero-frame,.hero-frame .hero-avatar,.hero-avatar{width:114px;height:114px}
+}
+
+
+.bg-video,.bg-image{
+  filter:none !important;
+  -webkit-filter:none !important;
+  transform:none !important;
+}
+.bg-image{
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  opacity:1 !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+}
+.backdrop:after{
+  background:linear-gradient(110deg,rgba(0,0,0,.06),rgba(0,0,0,.22)) !important;
+}
+@media(max-width:480px){.bg-video,.bg-image{filter:none!important;-webkit-filter:none!important}}
+
+
+.profile-card {
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+.music-area,
+.activities-section {
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+.playlist-controls,
+.activities-list .activity-card {
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+.playlist-controls { border-color: rgba(255,255,255,.12) !important; }
+.activities-list .activity-card { border-color: rgba(255,255,255,.10) !important; }
+.playlist-controls:hover,
+.activities-list .activity-card:hover { background: transparent !important; }
+@media (max-width: 480px) {
+  .profile-card, .music-area, .activities-section { background: transparent !important; }
+}
+
+
+:root { --font-body: "DM Sans", system-ui, sans-serif; --font-display: "Cinzel", Georgia, serif; --font-ui: "Space Grotesk", "DM Sans", sans-serif; }
+html, body, button, input, textarea, select { font-family: var(--font-body) !important; }
+h1, .name-line, .music-heading, .activities-heading, .music-heading *, .activities-heading { font-family: var(--font-display) !important; }
+.subtitle, .count-line, .presence-copy, .music-visualizer, .playlist-controls, .activity-label, .activity-title, .activity-subtitle, .activity-extra, .server-tag, .enter-button, .toast { font-family: var(--font-ui) !important; }
+.name-line { letter-spacing: .075em; }
+.music-heading, .activities-heading { font-size: 11px !important; letter-spacing: .19em !important; }
+.activity-label { font-size: 10px; font-weight: 700; letter-spacing: .13em; color: #aaa5b2; }
+.activity-title { font-size: 14px; font-weight: 700; letter-spacing: .015em; color: #f4f1f7; overflow-wrap: anywhere; }
+.activity-subtitle { font-size: 12px; color: #b4afbb; overflow-wrap: anywhere; }
+.activity-extra { margin-top: 5px; font-size: 10px; letter-spacing: .025em; color: #85808d; overflow-wrap: anywhere; }
+.activities-list .activity-card { align-items: center; min-height: 96px; }
+.activity-art { width: 68px; height: 68px; flex-basis: 68px; position: relative; }
+.activity-logo { object-fit: cover; }
+.activity-small-logo { width: 30px; height: 30px; border: 2px solid rgba(12,12,15,.9); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.activities-list .activity-copy { display: flex; flex-direction: column; gap: 4px; }
+@media(max-width:520px) { .activity-art { width: 54px; height: 54px; flex-basis: 54px; } .activity-title { font-size: 13px; } }
+
+
+.stage{min-height:100svh;padding:10px 14px;justify-content:center}
+.profile-card{width:min(100%,480px);padding:16px 22px 14px;margin:auto}
+.top-orbit{width:82px;height:82px;margin:0 auto 10px}
+.hero-frame,.hero-frame .hero-avatar,.hero-avatar{width:72px;height:72px}
+.name-line{margin:4px 0 2px;font-size:clamp(28px,5vw,34px)}
+.subtitle{font-size:11px;line-height:1.3}
+.count-line{margin:10px 0 11px;font-size:9px;gap:9px}
+.socials{gap:16px;margin:12px 0 13px}
+.socials a,.socials svg{width:22px;height:22px}
+.music-area,.activities-section{padding:10px 12px;border-radius:14px}
+.music-area{margin-bottom:9px}
+.music-heading,.activities-heading{font-size:10px!important;letter-spacing:.16em!important;margin-bottom:7px}
+.music-visualizer{height:17px;margin:3px 0 6px}
+.playlist-controls{padding:7px 10px;margin-bottom:0;min-height:38px;border-radius:11px}
+.playlist-controls button{width:28px;height:27px;min-width:28px;min-height:27px;font-size:17px}
+#trackLabel{font-size:10px}
+.activities-section{margin-top:9px}
+.activities-list .activity-card{min-height:54px;padding:8px 10px;margin-top:7px;gap:10px;border-radius:12px}
+.activity-art{width:42px;height:42px;flex-basis:42px;border-radius:9px;font-size:17px}
+.activity-title{font-size:11px!important;margin-top:1px;line-height:1.3}
+.activity-subtitle{font-size:9px!important;line-height:1.3}
+.activity-extra{font-size:8px;margin-top:1px;line-height:1.25}
+.activity-label{font-size:8px;letter-spacing:.1em}
+.activity-pulse{width:4px;height:4px}
+@media(max-height:760px) and (min-width:601px){
+ .stage{padding:6px 12px}
+ .profile-card{padding:11px 20px 10px}
+ .top-orbit{width:68px;height:68px;margin-bottom:7px}
+ .hero-frame,.hero-frame .hero-avatar,.hero-avatar{width:60px;height:60px}
+ .socials{margin:8px 0 9px}
+ .count-line{margin:7px 0 8px}
+ .music-area,.activities-section{padding:8px 10px}
+ .activities-list .activity-card{min-height:47px;padding:6px 9px;margin-top:5px}
+ .activity-art{width:36px;height:36px;flex-basis:36px}
+}
+@media(max-width:600px){
+ .stage{min-height:100svh;padding:54px 12px 12px;justify-content:center}
+ .profile-card{width:min(100%,430px);padding:17px 14px 13px}
+ .top-orbit{width:76px;height:76px;margin-bottom:9px}
+ .hero-frame,.hero-frame .hero-avatar,.hero-avatar{width:66px;height:66px}
+ .socials{margin:11px 0 12px}
+ .music-area,.activities-section{padding:10px;border-radius:13px}
+ .activities-list .activity-card{min-height:52px;padding:8px}
+ .activity-art{width:40px;height:40px;flex-basis:40px}
 }
