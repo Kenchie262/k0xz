@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="kenchie on top">
+  <title>@kench</title>
+  <link rel="preconnect" href="https://api.lanyard.rest">
+  <link rel="preconnect" href="https://cdn.discordapp.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <video class="bg-video" id="bgVideo" autoplay muted loop playsinline>
+      
+    </video>
+    <div class="bg-image"></div>
+    <div class="grain"></div>
+    <div class="anime-grid" aria-hidden="true"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+  </div>
+
+  <button class="sound-toggle" id="soundToggle" aria-label="Toggle music" title="Toggle music">
+    <svg id="soundIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+  </button>
+  <audio id="siteMusic" src="assets/song1.MP3" preload="metadata"></audio>
+
+  <main class="stage">
+    <section class="profile-card" aria-label="Profile">
+      <div class="top-orbit"><div class="orbit-ring"></div><div class="orbit-spark"></div><div class="avatar-frame hero-frame"><img class="avatar hero-avatar" id="heroAvatar" src="assets/avatar-placeholder.svg" alt="Profile avatar"><img class="avatar-decoration hero-decoration" id="heroDecoration" alt="" aria-hidden="true" hidden></div></div>
+      <h1 class="name-line" aria-label="Profile name"><span id="displayName">kenchie</span><span class="server-tag" id="serverTag" title="Discord server tag REV"><span class="server-tag-icon" aria-hidden="true">✦</span><span id="serverTagText">REV</span></span></h1>
+      <p class="subtitle" id="tagline">Destiny called me</p>
+      <div class="count-line"><span class="count-rule"></span><span>HEROIN ON MY VEINS</span><span class="count-rule"></span></div>
+
+      <div class="presence-panel">
+        <div class="avatar-wrap">
+          <span class="small-avatar-frame"><img class="avatar small-avatar" id="smallAvatar" src="assets/avatar-placeholder.svg" alt=""><img class="avatar-decoration small-decoration" id="smallDecoration" alt="" aria-hidden="true" hidden></span>
+          <span class="status-dot" id="statusDot"></span>
+        </div>
+        <div class="presence-copy">
+          <div class="presence-name"><span id="discordName">kxx.z7</span><span class="mini-badge">✦</span></div>
+          <div class="presence-status" id="presenceStatus">Connecting to Discord…</div>
+          <div class="presence-detail" id="presenceDetail">Live presence appears here</div>
+        </div>
+        <div class="discord-mark" aria-label="Discord">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.2a18 18 0 0 0-4.4-1.4l-.5 1a16 16 0 0 0-5.6 0l-.5-1a18 18 0 0 0-4.4 1.4C1.5 9.3.7 13.3 1.1 17.2a18 18 0 0 0 5.4 2.7l1.2-2a11 11 0 0 1-1.9-.9l.5-.4a12.8 12.8 0 0 0 11.4 0l.5.4a11 11 0 0 1-1.9.9l1.2 2a18 18 0 0 0 5.4-2.7c.5-4.5-.8-8.5-3.2-12zM8.8 14.7c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+        </div>
+      </div>
+
+      <div class="socials" aria-label="Social links">
+        <a href="https://instagram.com/k0xx.z7" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" class="solid"/></svg>
+        </a>
+        <a href="https://tiktok.com/raiyukench" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M14 3v11.2a4.2 4.2 0 1 1-3.6-4.1"/><path d="M14 3c.5 3.2 2.4 5 5.5 5.3"/></svg>
+        </a>
+        <a href="https://kenchie-xi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Custom website" title="Custom website">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+        </a>
+      </div>
+
+      <div class="music-area" aria-label="Music player">
+        <div class="music-heading">NOW PLAYING</div>
+        <div class="music-visualizer" id="musicVisualizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="playlist-controls" aria-label="Music playlist controls"><button id="previousTrack" type="button" aria-label="Previous song" title="Previous song">‹</button><span id="trackLabel">TRACK 1 / 4</span><button id="nextTrack" type="button" aria-label="Next song" title="Next song">›</button></div>
+      </div>
+      <section class="activities-section" aria-label="Discord activities"><div class="activities-heading">LIVE ACTIVITY</div><div id="activityCard" class="activities-list"><div class="activity-card"><div class="activity-icon">♫</div><div class="activity-copy"><div class="activity-label">DISCORD ACTIVITY</div><div class="activity-title">Waiting for activity</div><div class="activity-subtitle">Discord presence syncs live</div></div></div></div></section>
+
+    </section>
+  </main>
+
+  <section class="enter-screen" id="enterScreen">
+    <div class="enter-content">
+      <button class="enter-button simple-enter" id="enterButton" aria-live="polite">click here to enter</button>
+    </div>
+  </section>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
